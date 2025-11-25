@@ -131,9 +131,7 @@ Peca desenfileirar(FilaCircular *fila)
  */
 void visualizarFila(const FilaCircular *fila)
 {
-    printf("--------------------------------------------------");
     printf("\n  Fila de Peças Futuras (Tamanho: %d/%d)  \n", fila->tamanho, CAPACIDADE);
-    printf("--------------------------------------------------\n");
 
     if (filaVazia(fila))
     {
@@ -195,10 +193,10 @@ int main()
     do
     {
         printf("\n--- 🎮 Menu de Ações ---\n");
-        printf("1. Jogar a Próxima Peça (Dequeue + Novo Enqueue)\n");
+        printf("\n1. Jogar a Próxima Peça (Dequeue + Novo Enqueue)\n");
         printf("2. Visualizar Fila Atual\n");
         printf("0. Sair do Programa\n");
-        printf("Escolha uma opção: ");
+        printf("\nEscolha uma opção: ");
 
         if (scanf("%d", &opcao) != 1)
         {
