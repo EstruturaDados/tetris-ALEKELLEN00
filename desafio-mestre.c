@@ -195,17 +195,17 @@ Peca espiarPilha(const Pilha *pilha)
 
 void visualizarFila(const FilaCircular *fila)
 {
-    printf("\n---  Fila de Peças Futuras (Tamanho: %d/%d)  ---\n", fila->tamanho, CAPACIDADE_FILA);
+    printf("\n Fila de Peças Futuras (Tamanho: %d/%d) \n", fila->tamanho, CAPACIDADE_FILA);
 
     if (filaVazia(fila))
     {
-        printf("A fila está vazia.\n");
+        printf(" A fila está vazia.\n");
         return;
     }
 
     int i = fila->frente;
     int count = 0;
-    printf("   Frente (Próxima) -> ");
+    printf(" Frente (Próxima) -> ");
 
     while (count < fila->tamanho)
     {
@@ -226,16 +226,16 @@ void visualizarFila(const FilaCircular *fila)
 
 void visualizarPilha(const Pilha *pilha)
 {
-    printf("\n--- 📦 Pilha de Reserva (Tamanho: %d/%d) 📦 ---\n", pilha->topo + 1, CAPACIDADE_PILHA);
+    printf("\n🔋 Pilha de Reserva (Tamanho: %d/%d) \n", pilha->topo + 1, CAPACIDADE_PILHA);
 
     if (pilhaVazia(pilha))
     {
-        printf("A pilha de reserva está vazia.\n");
+        printf(" A pilha de reserva está vazia.\n");
         printf("---------------------------------------------------\n");
         return;
     }
 
-    printf("   Topo (Última Reservada) -> ");
+    printf(" Topo (Peça Reservada) -> ");
     for (int i = pilha->topo; i >= 0; i--)
     {
         printf("[ID:%d|%s]", pilha->itens[i].id, pilha->itens[i].nome);
