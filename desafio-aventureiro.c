@@ -176,7 +176,7 @@ Peca desempilhar(Pilha *pilha)
  */
 void visualizarFila(const FilaCircular *fila)
 {
-    printf("\n---  Fila de Peças Futuras (Tamanho: %d/%d)  ---\n", fila->tamanho, CAPACIDADE_FILA);
+    printf("\n Fila de Peças Futuras (Tamanho: %d/%d)  \n", fila->tamanho, CAPACIDADE_FILA);
 
     if (filaVazia(fila))
     {
@@ -186,7 +186,7 @@ void visualizarFila(const FilaCircular *fila)
 
     int i = fila->frente;
     int count = 0;
-    printf("   Frente (Próxima) -> ");
+    printf(" Frente (Próxima) -> ");
 
     while (count < fila->tamanho)
     {
@@ -210,11 +210,11 @@ void visualizarFila(const FilaCircular *fila)
  */
 void visualizarPilha(const Pilha *pilha)
 {
-    printf("\n--- 📦 Pilha de Reserva (Tamanho: %d/%d) 📦 ---\n", pilha->topo + 1, CAPACIDADE_PILHA);
+    printf("\n🔋 Pilha de Reserva (Tamanho: %d/%d)  \n", pilha->topo + 1, CAPACIDADE_PILHA);
 
     if (pilhaVazia(pilha))
     {
-        printf("A pilha de reserva está vazia.\n");
+        printf(" A pilha de reserva está vazia.\n");
         printf("---------------------------------------------------\n");
         return;
     }
@@ -269,12 +269,12 @@ int main()
     do
     {
         printf("\n--- 🎮 Menu de Ações ---\n");
-        printf("1. Jogar a Próxima Peça (Dequeue da Fila + Novo Enqueue)\n");
+        printf("\n1. Jogar a Próxima Peça (Dequeue da Fila + Novo Enqueue)\n");
         printf("2. Reservar Peça (Dequeue da Fila -> PUSH na Pilha)\n");
         printf("3. Usar Peça Reservada (POP da Pilha)\n");
         printf("4. Visualizar Ambos (Fila e Pilha)\n");
         printf("0. Sair do Programa\n");
-        printf("Escolha uma opção: ");
+        printf("\nEscolha uma opção: ");
 
         if (scanf("%d", &opcao) != 1)
         {
