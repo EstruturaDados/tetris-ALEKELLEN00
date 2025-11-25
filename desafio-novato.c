@@ -131,9 +131,9 @@ Peca desenfileirar(FilaCircular *fila)
  */
 void visualizarFila(const FilaCircular *fila)
 {
-    printf("=================================================");
+    printf("--------------------------------------------------");
     printf("\n  Fila de Peças Futuras (Tamanho: %d/%d)  \n", fila->tamanho, CAPACIDADE);
-    printf("=================================================\n");
+    printf("--------------------------------------------------\n");
 
     if (filaVazia(fila))
     {
@@ -143,7 +143,7 @@ void visualizarFila(const FilaCircular *fila)
 
     int i = fila->frente;
     int count = 0;
-    printf("   Frente (Próxima) -> ");
+    printf("  Frente (Próxima) -> ");
 
     // Percorre a fila desde a "frente" até o último elemento inserido
     while (count < fila->tamanho)
